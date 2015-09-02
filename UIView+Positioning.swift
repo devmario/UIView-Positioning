@@ -73,9 +73,9 @@ extension UIView{
     
     var lastSubviewOnX:UIView?{
         get {
-            var outView:UIView = self.subviews[0] as UIView
+            var outView:UIView = self.subviews[0] as! UIView
             
-            for v in self.subviews as [UIView] {
+            for v in self.subviews as! [UIView] {
                 if(v.x > outView.x){ outView = v }
             }
             
@@ -85,9 +85,9 @@ extension UIView{
     
     var lastSubviewOnY:UIView?{
         get {
-            var outView:UIView = self.subviews[0] as UIView
+            var outView:UIView = self.subviews[0] as! UIView
             
-            for v in self.subviews as [UIView] {
+            for v in self.subviews as! [UIView] {
                 if(v.y > outView.y){ outView = v }
             }
             
